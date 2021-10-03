@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Yantramanav:wght@500&display=swap");
+
+:root {
+  --overlayColor: #03a9f4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  z-index: 2;
+  transition: 1s;
+}
+
+.showcase.active {
+  right: 300px;
+}
+
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url("images/menu.png");
+  background-repeat: no-repeat;
+  background-size: 31px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: url("images/close.png");
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: center;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background:rgba(0,0,0,0.5); */
+  background: var(--overlayColor);
+  mix-blend-mode: overlay;
+}
+
+.text {
+  position: relative;
+  z-index: 10;
+}
+
+.text h2 {
+  font-size: 3.5em;
+  font-weight: 600;
+  line-height: 1.5em;
+  font-family: "Yantramanav", sans-serif;
+  text-transform: uppercase;
+}
+
+.text h3 {
+  font-size: 2.3em;
+  font-weight: 700;
+  line-height: 1em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.text p {
+  font-size: 1.2em;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+  background: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #111;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.text a:hover {
+  letter-spacing: 6px;
+}
+
+.social {
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  filter: invert(1);
+  margin-right: 20px;
+  transform: scale(0.9);
+  transition: 1s;
+}
+
+.social li a :hover {
+  transform: scale(0.9) translateY(-3px);
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu ul {
+  position: relative;
+  list-style: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+
+.menu ul li a:hover {
+  color: var(--overlayColor);
+}
+
+/* self */
+.social-logo {
+  /* height: 40px; */
+  width: 30px;
+}
+
+@media (max-width: 991px) {
+  .showcase,
+  .showcase header {
+    padding: 40px;
+  }
+
+  .showcase.active {
+    right: 200px;
+  }
+
+  .text {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .menu {
+    width: 200px;
+  }
+
+  .text h2 {
+    font-size: 2.8em;
+  }
+
+  .text h3 {
+    font-size: 1.8em;
+  }
+
+  .text p {
+    font-size: 0.9em;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+  }
+
+}
