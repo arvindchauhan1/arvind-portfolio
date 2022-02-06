@@ -319,6 +319,13 @@ h6 {
   text-align: center;
 }
 
+.social-links>a{
+  display: inline-block;
+  margin: 8px 0;
+
+  text-decoration: none;
+}
+
 #social_img {
   width: 100%;
 }
