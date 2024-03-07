@@ -23,6 +23,8 @@ html,
 body {
   padding: 0;
   margin: 0;
+  /* scrollbar-width: none; 
+  -ms-overflow-style: none; */
 }
 
 body * {
@@ -39,6 +41,7 @@ strong {
   color: var(--mainText);
   font-family: "Russo One", sans-serif;
   font-weight: 500;
+  letter-spacing: 0.05rem;
 }
 
 p,
@@ -54,7 +57,7 @@ textarea {
 a {
   text-decoration: none;
   color: #17a2b8;
-  font-family: "Merienda", cursive;
+  font-family: 'Open Sans', sans-serif;
   font-size: 0.75rem;
 }
 
@@ -65,18 +68,23 @@ ul {
 h1 {
   font-size: 56px;
 }
+
 h2 {
   font-size: 36px;
 }
+
 h3 {
   font-size: 28px;
 }
+
 h4 {
   font-size: 24px;
 }
+
 h5 {
   font-size: 20px;
 }
+
 h6 {
   font-size: 16px;
 }
@@ -133,6 +141,9 @@ h6 {
 
 #navigation a {
   color: var(--mainText);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
 }
 
 #navigation {
@@ -313,17 +324,42 @@ h6 {
   background-color: var(--previewShadow);
 }
 
+#skills>ul {
+  padding: 0;
+  letter-spacing: 0.5px;
+  /* font-size: 14px; */
+}
+
+#skills>ul>li {
+  margin-bottom: 8px;
+}
+
+#skills>ul>li>span {
+  font-weight: 600;
+
+}
+
 .social-links {
   display: grid;
   align-content: center;
   text-align: center;
 }
 
-.social-links>a{
-  display: inline-block;
+.social-links>a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 8px 0;
-
+  font-size: 14px;
+  font-weight: 400;
+  
   text-decoration: none;
+  color: #fff;
+}
+.social-links>a>img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
 
 #social_img {
@@ -354,13 +390,12 @@ h6 {
 }
 
 .post-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
-  padding: 50px;
-  height: 6em;
-}
-
-.post-preview a {
-  text-decoration: line-through;
+  padding: 30px;
+  height: 8em;
 }
 
 .post-title {
@@ -411,6 +446,7 @@ h6 {
   color: #fff;
   background-color: var(--btnColor);
   border: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {
@@ -427,6 +463,7 @@ h6 {
       "left-column"
       "right-column";
   }
+
   .right-column {
     justify-content: center;
   }
